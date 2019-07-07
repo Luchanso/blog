@@ -1,5 +1,9 @@
 import { Link, graphql } from 'gatsby';
-import { formatPostDate, formatReadingTime } from '../utils/helpers';
+import {
+  formatPostDate,
+  formatReadingTime,
+  formatWordsCount,
+} from '../utils/helpers';
 
 import Bio from '../components/Bio';
 import Footer from '../components/Footer';
@@ -24,20 +28,6 @@ class BlogIndexTemplate extends React.Component {
           <Bio />
         </aside>
         <main>
-          {langKey !== 'en' && langKey !== 'ru' && (
-            <Panel>
-              These articles have been{' '}
-              <a
-                href="https://github.com/gaearon/overreacted.io#contributing-translations"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                translated by the community
-              </a>
-              .
-            </Panel>
-          )}
-
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug;
             return (
@@ -61,6 +51,7 @@ class BlogIndexTemplate extends React.Component {
                   <small>
                     {formatPostDate(node.frontmatter.date, langKey)}
                     {` • ${formatReadingTime(node.timeToRead)}`}
+                    {` • ${formatWordsCount(node.wordCount.words)}`}
                   </small>
                 </header>
                 <p
@@ -97,6 +88,9 @@ export const pageQuery = graphql`
             langKey
           }
           timeToRead
+          wordCount {
+            words
+          }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title

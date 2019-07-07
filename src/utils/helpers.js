@@ -23,3 +23,7 @@ export function formatPostDate(date, lang) {
   ].filter(Boolean);
   return date.toLocaleDateString(...args);
 }
+
+export function formatWordsCount(words) {
+  return `${words} words`;
+}

@@ -1,10 +1,12 @@
-import '../fonts/fonts-shared.css';
 import './global.css';
 
 import Typography from 'typography';
 import Wordpress2016 from 'typography-theme-wordpress-2016';
 
 Wordpress2016.overrideThemeStyles = () => ({
+  body: {
+    'font-family': '"-apple-system",BlinkMacSystemFont,Arial,sans-serif;',
+  },
   a: {
     color: 'var(--textLink)',
   },
@@ -27,6 +29,9 @@ Wordpress2016.overrideThemeStyles = () => ({
   // TODO: why tho
   'h1 code, h2 code, h3 code, h4 code, h5 code, h6 code': {
     fontSize: 'inherit',
+  },
+  'h1, h2, h3, h4, h5, h6': {
+    'font-family': '"-apple-system",BlinkMacSystemFont,Arial,sans-serif;',
   },
   'li code': {
     fontSize: '1rem',

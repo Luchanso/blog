@@ -1,12 +1,9 @@
 {
   "name": "overreacted",
   "private": true,
-  "description": "Overreacted",
+  "description": "blog",
   "version": "1.0.0",
-  "author": "Dan Abramov <dan.abramov@me.com>",
-  "bugs": {
-    "url": "https://github.com/gaearon/overreacted.io/issues"
-  },
+  "author": "Loutchansky Oleg <luchansodev@gmail.com>",
   "dependencies": {
     "gatsby": "^2.0.76",
     "gatsby-plugin-catch-links": "^2.0.9",
@@ -45,7 +42,7 @@
     "gh-pages": "^1.2.0",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://overreacted.io",
+  "homepage": "https://luchanso.github.io/blog",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby develop",
