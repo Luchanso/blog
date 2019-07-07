@@ -100,7 +100,7 @@ class BlogPostTemplate extends React.Component {
         <aside>
           <h3
             style={{
-              fontFamily: 'Montserrat, sans-serif',
+              fontFamily: systemFont,
               marginTop: rhythm(0.25),
             }}
           >

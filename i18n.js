@@ -1,5 +1,6 @@
 // Please keep keys lowercase!
+// TODO: make russion by default lang
 exports.supportedLanguages = {
-  ru: 'Русский',
-  en: 'English'
+  en: 'English',
+  ru: 'Русский'
 };

@@ -14,6 +14,8 @@ import SEO from '../components/SEO';
 import get from 'lodash/get';
 import { rhythm } from '../utils/typography';
 
+const systemFont = `"-apple-system",BlinkMacSystemFont,Arial,sans-serif;`;
+
 class BlogIndexTemplate extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title');
@@ -35,7 +37,7 @@ class BlogIndexTemplate extends React.Component {
                 <header>
                   <h3
                     style={{
-                      fontFamily: 'Montserrat, sans-serif',
+                      fontFamily: systemFont,
                       fontSize: rhythm(1),
                       marginBottom: rhythm(1 / 4),
                     }}
